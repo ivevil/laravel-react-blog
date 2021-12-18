@@ -1,4 +1,4 @@
-# Frontend: React Backend: PHP/Laravel
+# Frontend: || Backend: PHP/Laravel
 
 This blog is created on Blade templates as a frontend running on Laravel framework. 
 For backend we created custom cms specially created for this blog. There are several widgets used for inputing data for frontend.
