@@ -16,3 +16,33 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['namespace' => 'App\Http\Controllers\Auth'], function()
+{
+    Route::group(['middleware' => ['guest']], function() {
+    /**
+     * Register Routes
+     */
+    Route::get('/register', 'RegisterController@show')->name('register');
+    Route::post('/register', 'RegisterController@register')->name('register.perform');
+
+    /**
+     * Login Routes
+     */
+    Route::get('/login', 'LoginController@show')->name('login');
+    Route::post('/login', 'LoginController@login')->name('login.perform');
+
+    /**
+    * Reset passwords
+    */
+    Route::get('/pass-reset', 'ResetPasswordController@reset')->name('passwords.reset');
+
+  });
+
+  Route::group(['middleware' => ['auth']], function() {
+      /**
+       * Logout Routes
+       */
+       Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+  });
+});
