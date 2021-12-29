@@ -12,7 +12,7 @@ Currently we are working on improving API which is going to be used for frontend
 
 ## Start the app
 - Clone the repository
-> git clone git@github.com:ivevil/laravel-blog.git
+> git clone git@github.com:ivevil/laravel-react-blog.git
 
 - Switch to the repo folder
 > cd laravel-blog
@@ -20,8 +20,8 @@ Currently we are working on improving API which is going to be used for frontend
 - Install all the dependencies using composer
 > composer install
 
-- Copy the example env file and make the required configuration changes in the .env file
-> cp .env.example .env
+- Create .env file and fill it up with your name of app, database etc.
+> cp .env
 
 - Generate a new application key
 > php artisan key:generate
